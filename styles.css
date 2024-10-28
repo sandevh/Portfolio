@@ -1,18 +1,24 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Montserrat";
 }
 
 /* Styles for header */
 .header {
-  background-color: rgb(48, 194, 243);
+  background-color: #05161a;
   padding: 2em;
+}
+
+#name {
+  color: #6da5c0;
+  font-weight: 900;
+  font-size: 2em;
 }
 
 .header-container {
   position: absolute;
-  right: 0;
+  right: 1em;
   top: 1.5em;
 }
 
@@ -27,30 +33,94 @@
 }
 
 .header-container ul li a {
+  display: inline-block;
   text-decoration: none;
   font-size: 1.5em;
-  color: rgb(15, 2, 41);
-  font-family: fantasy;
+  color: #f5d7db;
   transition: all 0.15s ease-in-out;
 }
 
 .header-container .active {
-  color: rgb(255, 255, 255);
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.2em;
+  border-radius: 10px;
 }
 
 .header-container ul li a:not(.active):hover {
-  color: pink;
+  color: #6da5c0;
+  transform: scale(1.1);
 }
 
-/* Styles for main content */
-.main-content {
-  padding: 2em;
+/* Styles for register page */
+body {
+  background-color: #06142e;
+}
+
+.container {
+  max-width: 60%;
+  margin: 3em auto;
+  background: linear-gradient(45deg, #bd83b8, #1b3358);
+  padding: 3em;
+  border-radius: 1em;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+  color: black;
+  font-weight: 500;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #06142e;
+}
+
+.group {
+  margin-bottom: 1.5em;
+}
+
+.group label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.group input {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.group input:focus {
+  border-color: black;
+  border-width: 2px;
+  outline: none;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.btn {
+  padding: 1em;
+  color: #f5d7db;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #06142e;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #0a2049;
 }
 
 /* Styles for footer */
 .footer {
-  background-color: rgba(48, 194, 243);
+  background-color: #05161a;
   padding: 2em;
+  width: auto;
+  bottom: 0;
 }
 
 .footer-container {
@@ -61,8 +131,9 @@
 }
 
 .footer-container .items {
-  color: aqua;
+  color: #f5d7db;
   font-size: 2em;
+  text-align: center;
 }
 
 .footer-container ul {
@@ -81,7 +152,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
   font-weight: 600;
-  color: rgb(10, 31, 106);
+  color: #e3a9df;
   transition: all 0.15s ease-in-out;
 }
 
@@ -89,18 +160,20 @@
   color: white;
 }
 
-#mobile {
-  font-family: sans-serif;
-  font-weight: 600;
+.mobile ul li a:hover::before {
+  position: absolute;
+  margin-left: -2.8em;
+  content: "Dial:";
+  color: #bd83b8;
 }
 
 #reserved {
   text-align: center;
-  color: rgb(61, 58, 58);
+  color: #f5d7db;
   font-weight: bold;
   font-family: monospace;
   padding-top: 2em;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 /* Large screens */
