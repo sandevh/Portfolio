@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab&family=Lora&family=Playfair+Display&family=Source+Sans+Pro&display=swap');
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat";
+  font-family:"Montserrat", Arial, Helvetica, sans-serif;
 }
-
 html, body {
   height: 100%;
   display: flex;
@@ -15,53 +15,105 @@ html, body {
   background-color: #05161a;
   padding: 2em;
 }
-
 #name {
   color: #6da5c0;
   font-weight: 900;
   font-size: 2em;
 }
-
 .header-container {
   position: absolute;
   right: 1em;
   top: 1.5em;
 }
-
 .header-container ul {
   display: flex;
   flex-direction: row;
 }
-
-.header-container ul li {
+.header-container ul > li {
   list-style-type: none;
   padding-right: 2em;
 }
-
-.header-container ul li a {
+.header-container ul > li >a {
   display: inline-block;
   text-decoration: none;
   font-size: 1.5em;
   color: #f5d7db;
   transition: all 0.15s ease-in-out;
 }
-
 .header-container .active {
   color: #fff;
   border: 2px solid #fff;
   padding: 0.2em;
   border-radius: 10px;
 }
-
-.header-container ul li a:not(.active):hover {
+.header-container ul > li a:not(.active):hover {
   color: #6da5c0;
   transform: scale(1.1);
 }
-
 /*Styels for main content*/
 .content {
   flex: 1;
   background-color: #06142e;
+}
+
+/*Styles for Home page*/
+.home-container {
+  border: 1px solid transparent;
+  box-shadow: 0 2px 15px rgba(255, 255, 255, 0.4);
+  color: white;
+  font-size: 2em;
+  margin: 2em 2em;
+  padding: 1.5em;
+  border-radius: 0.5em;
+}
+.home-container .definition {
+  margin: auto;
+}
+.home-container .definition p:first-of-type {
+  color: rgb(194, 236, 194);
+  font-weight: 600;
+}
+.home-container .definition p:last-child #SE {
+  color: whitesmoke;
+  font-weight: 900;
+  display: block;
+  font-size: 1.5em;
+}
+.home-container .technologies {
+  margin-top: 2em;
+  margin-left: 1em;
+}
+.home-container .technologies .tech-topic {
+  font-size: 0.5em;
+  font-weight: 500
+}
+.home-container .technologies .skills ul>li {
+  font-size: 0.5em;
+  list-style-type: square;
+}
+.home-container .technologies .skills .rating {
+  font-size: 0.8em;
+}
+.home-container .projects {
+  margin: 2em auto;
+  text-align: center;
+}
+.home-container .projects .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
+  margin: 1em;
+}
+.home-container .projects .grid-container .grid-item {
+  width: 80%;
+  height: 100%;
+}
+.leetcode {
+  display: inline-block;
+  margin-top: 2em;
+}
+h5+a {
+  color: whitesmoke;
 }
 
 /*Styles for About page*/
@@ -74,11 +126,10 @@ html, body {
   padding: 1em;
   border-radius: 10px;
   margin: 4em 2em;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+  box-shadow:  0 2px 15px rgba(255, 255, 255, 0.4);
   border: 1px solid transparent;
   transition: all 0.15s ease-in-out;
 }
-
 @keyframes border-animation {
   0% {
     border-color: transparent;
@@ -92,37 +143,37 @@ html, body {
     border-color: transparent;
   }
 }
-
 .about-container:hover {
   background: rgba(190, 187, 187, 0.1);
   animation: border-animation 3s infinite;
 }
-
+.about-container:hover .initial-text p:first-of-type {
+  opacity: 0.1;
+}
+.about-container:hover #my-name {
+  text-transform: uppercase;
+}
 .initial-text p:first-of-type {
   color: white;
   font-weight: 600;
   font-size: 4em;
 }
-
 .initial-text p:nth-of-type(2) {
   color: rgb(183, 232, 210);
   font-size: 2em;
   font-weight: 600;
 }
-
 .initial-text #my-name {
   color: orange;
   text-shadow: 2px 4px 4px rgba(240, 94, 21, 0.3);
   font-size: inherit;
   font-weight: bold;
 }
-
 .about-container .about-me {
   color: lightgreen;
   margin-top: 2em;
   line-height: 2em;
 }
-
 .about-container .about-me .my-data {
   color: white;
 }
@@ -130,92 +181,104 @@ html, body {
 /*Styles for Blog page*/
 .blog-container h2 {
   color: whitesmoke;
+  font-size: 3em;
   padding: 1em;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.2em;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
 }
-
 .blog-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .blog-group {
   width: 80%;
   background-color: white;
-  box-shadow: 0 2px 10px rgb(34, 247, 211);
-  padding: 10px;
-  margin-bottom: 2em;
+  box-shadow: 0 1px 8px rgb(34, 247, 211);
+  padding: 1em;
+  margin: 1em auto 1em;
   border-radius: 0.5em;
   opacity: 80%;
   transition: all 0.15s ease-in-out;
 }
-
+.blog-group .blog-content {
+  padding: 1em;
+}
 .blog-group:hover {
   opacity: 100%;
+  box-shadow: 0 2px 10px rgb(34, 247, 211);
 }
-
 .blog-group h4 {
   text-align: center;
   margin-bottom: 0;
+  font-size: 1.3em;
 }
-
 .blog-group .date {
   font-family: 'Roboto Slab', serif;
-  color: #666;
-  font-size: 0.8em;
+  font-family: monospace;
+  color: #373636;
+  font-size: 1em;
   text-align: center;
   display: block;
 }
-
 .blog-content {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.subscribe, .subscribe > a {
+  text-align: center;
+  font-weight: 600;
+  color: whitesmoke;
+  padding: 1.5em;
 }
 
 /*Styles for Register page*/
 .form-container {
   width: 50%;
   margin: 2em auto;
-  background: linear-gradient(45deg, #bd83b8, #27497b);
+  background: linear-gradient(45deg, #d579cd, #144ea0);
   padding: 1em 3em;
   border-radius: 1em;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
   color: black;
   font-weight: 500;
 }
-
 .form-container h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #06142e;
 }
-
 .form-container .form-group {
   margin-bottom: 1em;
 }
-
 .form-container .form-group label {
   display: block;
   margin-bottom: 0.5em;
 }
-
 .form-container .form-group input {
   width: 100%;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
-.form-container .form-group input:focus {
-  border-color: black;
-  border-width: 2px;
-  outline: none;
+.form-container .form-group input[type="email"] {
+  color: rgb(59, 117, 217);
 }
-
+.form-container .form-group input[type="password"]::placeholder {
+  color: rgb(235, 25, 14);
+}
+.form-container .form-group input:focus {
+  border: 2px solid rgb(8, 8, 51);
+  outline: none;
+  font-size: 1em;
+  font-weight: 600;
+}
+.form-container .form-group input::placeholder {
+  font-size: 0.9em;
+  color: gray;
+}
 .form-container .btn-container {
   text-align: center;
 }
-
 .form-container .btn {
   padding: 1em;
   color: #f5d7db;
@@ -226,13 +289,11 @@ html, body {
   background-color: #06142e;
   transition: all 0.15s ease-in-out;
 }
-
 .form-container .btn:hover {
   cursor: pointer;
   background-color: #f5d7db;
   color: #06142e;
 }
-
 .form-container .btn:active {
   background-color: #06142e;
   color: #f5d7db;
@@ -243,32 +304,27 @@ html, body {
   background-color: #05161a;
   padding: 2em;
 }
-
 .footer-container {
   display: flex;
   flex-direction: row;
   padding-left: 2em;
   justify-content: space-around;
 }
-
 .footer-container .items {
   color: #f5d7db;
   font-size: 2em;
   text-align: center;
 }
-
 .footer-container ul {
   padding-top: 1em;
   padding-right: 1em;
 }
-
-.footer-container ul li {
+.footer-container ul > li {
   list-style: none;
   padding-bottom: 0.5em;
   padding-left: 1em;
 }
-
-.footer-container ul li a {
+.footer-container ul > li > a {
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
@@ -276,18 +332,18 @@ html, body {
   color: #e3a9df;
   transition: all 0.15s ease-in-out;
 }
-
-.footer-container ul li a:hover {
+.footer-container p ~ ul  {
+  padding: 2em;
+}
+.footer-container ul > li > a:hover {
   color: white;
 }
-
-.mobile ul li a:hover::before {
+.mobile ul>li>a:hover::before {
   position: absolute;
   margin-left: -2.8em;
   content: "Dial:";
   color: #bd83b8;
 }
-
 #reserved {
   text-align: center;
   color: #f5d7db;
@@ -296,13 +352,35 @@ html, body {
   padding-top: 2em;
   font-size: 1.2em;
 }
+#reserved::first-letter {
+  font-size: 1.2em;
+}
 
 /* Large screens */
 @media (min-width: 1200px) {
   .header-container ul li a {
     font-size: 1.5em;
   }
-
+  .home-container {
+    font-size: 2em;
+    padding: 2em;
+    margin: 2em;
+  }
+  .home-container .projects .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+  .home-container .definition p {
+    font-size: 1.5em;
+  }
+  .home-container .technologies .tech-topic,
+  .home-container .technologies .skills ul>li,
+  .home-container .technologies .skills .rating {
+    font-size: 1em;
+  }
+  .leetcode {
+    margin-top: 2em;
+  }
   .footer-container .items {
     font-size: 2em;
   }
@@ -313,27 +391,42 @@ html, body {
   #name {
     font-size: 1.2em;
   }
-
   .header-container {
     right: 1em;
   }
-
   .header-container ul {
     flex-direction: row;
     align-items: flex-end;
   }
-
+  .home-container {
+    font-size: 1.5em;
+    padding: 1.2em;
+    margin: 1em;
+  }
+  .home-container .projects .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .home-container .definition p {
+    font-size: 1.2em;
+  }
+  .home-container .technologies .tech-topic,
+  .home-container .technologies .skills ul>li,
+  .home-container .technologies .skills .rating {
+    font-size: 1em;
+  }
+  .leetcode {
+    margin-top: 1.5em;
+    }
   .footer-container {
     flex-direction: column;
     padding-left: 0;
     align-items: center;
   }
-
-  .footer-container ul li {
+  .footer-container ul > li {
     padding-left: 0;
     text-align: center;
   }
-
   #reserved {
     font-size: 1em;
     padding-top: 1em;
@@ -346,12 +439,10 @@ html, body {
     padding: 1em;
     text-align: center;
   }
-
   .header-container {
     position: static;
     text-align: center;
   }
-
   .header-container ul {
     display: flex;
     flex-direction: column;
@@ -359,45 +450,56 @@ html, body {
     padding: 0;
     margin-top: 1em;
   }
-
-  .header-container ul li {
+  .header-container ul > li {
     padding: 0.5em 0;
   }
-
-  .header-container ul li a {
+  .header-container ul > li >a {
     font-size: 1.2em;
   }
-
+  .home-container {
+    font-size: 1em;
+    padding: 1em;
+    margin: 0.5em;
+  }
+  .home-container .projects .grid-container {
+    grid-template-columns: 1fr;
+    gap: 0.8em;
+  }
+  .home-container .definition p {
+    font-size: 1em;
+  }
+  .home-container .technologies .tech-topic,
+  .home-container .technologies .skills ul>li,
+  .home-container .technologies .skills .rating {
+    font-size: 0.9em;
+  }
+  .leetcode {
+    margin-top: 1em;
+    font-size: 1em;
+  }
   .about-container {
     font-size: 0.5em;
   }
-
   .footer {
     padding: 1.5em;
   }
-
   .footer-container {
     flex-direction: column;
     align-items: center;
   }
-
   .footer-container .items {
     font-size: 1.5em;
   }
-
   .footer-container ul {
     padding: 0;
   }
-
-  .footer-container ul li {
+  .footer-container ul > li {
     padding-bottom: 0.5em;
     text-align: center;
   }
-
-  .footer-container ul li a {
-    font-size: 0.9em;
+  .footer-container ul > li > a {
+    font-size: 0.8em;
   }
-
   #reserved {
     font-size: 0.9em;
     padding-top: 1em;
