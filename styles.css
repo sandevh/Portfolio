@@ -64,10 +64,118 @@ html, body {
   background-color: #06142e;
 }
 
+/*Styles for About page*/
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  background: rgba(174, 169, 170, 0.1);
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1em auto;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+  border: 1px solid transparent;
+  transition: all 0.15s ease-in-out;
+}
+
+@keyframes border-animation {
+  0% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: whitesmoke;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+
+.about-container:hover {
+  background: rgba(190, 187, 187, 0.1);
+  animation: border-animation 3s infinite;
+}
+
+.initial-text p:first-of-type {
+  color: white;
+  font-weight: 600;
+  font-size: 4em;
+}
+
+.initial-text p:nth-of-type(2) {
+  color: rgb(183, 232, 210);
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.initial-text #my-name {
+  color: orange;
+  text-shadow: 2px 4px 4px rgba(240, 94, 21, 0.3);
+  font-size: inherit;
+  font-weight: bold;
+}
+
+.about-container .about-me {
+  color: lightgreen;
+  margin-top: 2em;
+  line-height: 2em;
+}
+
+.about-container .about-me .my-data {
+  color: white;
+}
+
+/*Styles for Blog page*/
+.blog-container h2 {
+  color: whitesmoke;
+  padding: 1em;
+  letter-spacing: 0.5em;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-group {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 2px 10px rgb(34, 247, 211);
+  padding: 10px;
+  margin-bottom: 2em;
+  border-radius: 0.5em;
+  opacity: 80%;
+  transition: all 0.15s ease-in-out;
+}
+
+.blog-group:hover {
+  opacity: 100%;
+}
+
+.blog-group h4 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.blog-group .date {
+  font-family: 'Roboto Slab', serif;
+  color: #666;
+  font-size: 0.8em;
+  text-align: center;
+  display: block;
+}
+
+.blog-content {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 /*Styles for Register page*/
 .form-container {
   width: 50%;
-  margin: 3em auto;
+  margin: 2em auto;
   background: linear-gradient(45deg, #bd83b8, #27497b);
   padding: 1em 3em;
   border-radius: 1em;
@@ -83,7 +191,7 @@ html, body {
 }
 
 .form-container .form-group {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .form-container .form-group label {
@@ -258,6 +366,10 @@ html, body {
 
   .header-container ul li a {
     font-size: 1.2em;
+  }
+
+  .about-container {
+    font-size: 0.5em;
   }
 
   .footer {
