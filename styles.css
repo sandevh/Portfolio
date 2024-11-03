@@ -303,7 +303,7 @@ h5+a {
 .form-container .btn-container {
   text-align: center;
 }
-.form-container .btn {
+.form-container .btn, .send-message .send{
   padding: 1em;
   color: #f5d7db;
   border: none;
@@ -313,12 +313,16 @@ h5+a {
   background-color: #06142e;
   transition: all 0.15s ease-in-out;
 }
-.form-container .btn:hover {
+.send-message .send {
+  margin: 0.1em;
+  border: 2px solid;
+}
+.form-container .btn:hover, .send-message .send:hover {
   cursor: pointer;
   background-color: #f5d7db;
   color: #06142e;
 }
-.form-container .btn:active {
+.form-container .btn:active, .send-message .send:active {
   background-color: #06142e;
   color: #f5d7db;
 }
@@ -332,6 +336,18 @@ h5+a {
 }
 .form-container .login:hover {
   color: #d6f0ef;
+}
+.send-message {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+.send-message #user-message {
+  outline: none;
+  width: 50%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1em;
 }
 
 /* Styles for footer */
