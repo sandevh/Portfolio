@@ -333,6 +333,12 @@ h5+a { /*adjacent-sibling-select first a under h5*/
   font-size: 0.9em;
   color: gray;
 }
+.form-container .form-group input:valid {
+  border: 2px solid rgb(19, 195, 19);
+}
+.form-container .form-group input:invalid {
+  border: 2px solid red;
+}
 .form-container .btn-container {
   text-align: center;
 }
