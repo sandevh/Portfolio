@@ -29,11 +29,11 @@ html, body {
   display: flex;
   flex-direction: row;
 }
-.header-container ul > li {
+.header-container ul > li { /*child*/
   list-style-type: none;
   padding-right: 2em;
 }
-.header-container ul > li >a {
+.header-container ul > li > a {
   display: inline-block;
   text-decoration: none;
   font-size: 1.5em;
@@ -118,7 +118,7 @@ html, body {
   display: inline-block;
   margin-top: 2em;
 }
-h5+a {
+h5+a { /*adjacent-sibling-select first a under h5*/
   color: whitesmoke;
 }
 .home-container .social-media {
@@ -416,7 +416,7 @@ h5+a {
   color: #e3a9df;
   transition: all 0.15s ease-in-out;
 }
-.footer-container p ~ ul  {
+.footer-container p ~ ul  { /*sibling-select ul under p*/
   padding: 2em;
 }
 .footer-container ul > li > a:hover {
