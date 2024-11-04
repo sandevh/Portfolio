@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
 
   <body>
     <header class="header">
       <div>
-        <p id="name">Portfolio</p>
+        <p class="name">Portfolio</p>
       </div>
         <nav class="header-container">
           <ul>
@@ -26,18 +27,18 @@
       <section class="home-container">
         <header class="definition">
           <p>I'm Sandev Hettiarachchi</p>
-          <p>an Emerging <span id="SE">Software Developer</span></p>
+          <p>an Emerging <span class="SE">Software Developer</span></p>
         </header>
-        <section class="projects">
+        <div class="projects">
           <h2>Projects I have Worked on</h2>
           <div class="grid-container">
             <img class="grid-item" src="TicTacToe.png" alt="Project-image">
             <img class="grid-item" src="ToDo.png" alt="Project-image">
           </div>
-        </section>
-        <section class="technologies">
+        </div>
+        <div class="technologies">
           <p class="tech-topic">Tech Stack</p>
-          <div class="skills">
+          <aside class="skills">
             <ul>
               <li>Python <span class="rating">⭐⭐⭐</span></li>
               <li>Java <span class="rating">⭐⭐</span></li>
@@ -47,8 +48,16 @@
               <li>VS Code <span class="rating">⭐⭐</span></li>
               <li>Git <span class="rating">⭐</span></li>
             </ul>
-          </div>
-        </section>
+          </aside>
+        </div>
+        <div>
+          <aside class="social-media">
+              <a  href="https://www.linkedin.com/in/sandev-hettiarachchi-3637972b3" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/sandevh" target="_blank"><i class="fab fa-github-square"></i></a>
+              <a href="https://www.facebook.com/sandev.hettiarachchi.7?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://www.instagram.com/sandev.h?igsh=MWNkcjMzdjBoOHc4Zg==" target="_blank"><i class="fab fa-instagram-square"></i></a>
+          </aside>
+        </div>
         <footer>
           <h5 class="leetcode">Visit my</h5>
           <a class="leetcode" href="https://leetcode.com/u/Y3HJQknF6q/" target="_blank">Leetcode</a>
@@ -61,9 +70,9 @@
           <div>
             <p class="items">Socials</p>
             <ul>
-              <li><a href="#">FaceBook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">WhatsApp</a></li>
+              <li><a href="https://www.facebook.com/sandev.hettiarachchi.7?mibextid=ZbWKwL" target="_blank">FaceBook</a></li>
+              <li><a href="https://www.instagram.com/sandev.h?igsh=MWNkcjMzdjBoOHc4Zg==" target="_blank">Instagram</a></li>
+              <li><a href="https://wa.me/qr/2WRHGFWBXP3TA1" target="_blank">WhatsApp</a></li>
             </ul>
           </div>
           <nav>
@@ -82,7 +91,7 @@
             </ul>
           </div>
       </div>
-      <p id="reserved">&copy; 2024 Sandev. All rights reserved.</p>
+      <p class="reserved">&copy; 2024 Sandev. All rights reserved.</p>
     </footer>
   </body>
 </html>

@@ -15,7 +15,7 @@ html, body {
   background-color: #05161a;
   padding: 2em;
 }
-#name {
+.name {
   color: #6da5c0;
   font-weight: 900;
   font-size: 2em;
@@ -50,6 +50,7 @@ html, body {
   color: #6da5c0;
   transform: scale(1.1);
 }
+
 /*Styels for main content*/
 .content {
   flex: 1;
@@ -73,7 +74,7 @@ html, body {
   color: rgb(194, 236, 194);
   font-weight: 600;
 }
-.home-container .definition p:last-child #SE {
+.home-container .definition p:last-child .SE {
   font-weight: 900;
   display: block;
   font-size: 1.5em;
@@ -120,6 +121,19 @@ html, body {
 h5+a {
   color: whitesmoke;
 }
+.home-container .social-media {
+  margin: 1em auto;
+  font-size: 1.5em;
+}
+
+.home-container .social-media a {
+  color: whitesmoke;
+  transition: all 0.15s ease-in-out;
+}
+
+.home-container .social-media a:hover {
+  color: rgb(47, 210, 164);
+}
 
 /*Styles for About page*/
 .about-container {
@@ -149,7 +163,7 @@ h5+a {
   }
 
   100% {
-    background-position: 0%;
+    background-position: 0;
   }
 }
 .about-container:hover {
@@ -172,7 +186,7 @@ h5+a {
 .about-container:hover .initial-text p:first-of-type {
   opacity: 0.1;
 }
-.about-container:hover #my-name {
+.about-container:hover .my-name {
   text-transform: uppercase;
 }
 .initial-text p:first-of-type {
@@ -185,7 +199,7 @@ h5+a {
   font-size: 2em;
   font-weight: 600;
 }
-.initial-text #my-name {
+.initial-text .my-name {
   color: orange;
   text-shadow: 2px 4px 4px rgba(240, 94, 21, 0.3);
   font-size: inherit;
@@ -220,7 +234,7 @@ h5+a {
   padding: 1em;
   margin: 1em auto 1em;
   border-radius: 0.5em;
-  opacity: 80%;
+  opacity: 70%;
   transition: all 0.15s ease-in-out;
   max-width: 50%;
 }
@@ -342,7 +356,7 @@ h5+a {
   justify-content: center;
   margin: 1em;
 }
-.send-message #user-message {
+.send-message .user-message {
   outline: none;
   width: 50%;
   border-radius: 10px;
@@ -395,7 +409,7 @@ h5+a {
   content: "Dial:";
   color: #bd83b8;
 }
-#reserved {
+.reserved {
   text-align: center;
   color: #f5d7db;
   font-weight: bold;
@@ -403,7 +417,7 @@ h5+a {
   padding-top: 2em;
   font-size: 1.2em;
 }
-#reserved::first-letter {
+.reserved::first-letter {
   font-size: 1.2em;
 }
 
@@ -439,13 +453,12 @@ h5+a {
 
 /* Tablet */
 @media (max-width: 992px) {
-  #name {
+  .name {
     font-size: 1.2em;
     margin-top: 0.4em;
   }
   .header-container {
     right: 1em;
-    color: red !important;
   }
   .header-container ul {
     flex-direction: row;
@@ -480,7 +493,7 @@ h5+a {
     padding-left: 0;
     text-align: center;
   }
-  #reserved {
+  .reserved {
     font-size: 1em;
     padding-top: 1em;
   }
@@ -553,7 +566,7 @@ h5+a {
   .footer-container ul > li > a {
     font-size: 0.8em;
   }
-  #reserved {
+  .reserved {
     font-size: 0.9em;
     padding-top: 1em;
     text-align: center;
